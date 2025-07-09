@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="CNH_InternalAPIAuths">
+         <ServerName>CNH</ServerName>
+         <Description>Authentication Table for Custom APIs</Description>
+         <LabelStringID>oCNH_InternalAPIAuths</LabelStringID>
+         <RevisionNo>6</RevisionNo>
+         <RevisionDate>2024-09-11T14:58:41</RevisionDate>
+         <CustomAssemblyName>CNH_APIKeyGeneration</CustomAssemblyName>
+         <ExtClassNamespace>CNHReman.SyteLine.CNH_APIKeyGeneration</ExtClassNamespace>
+         <ExtClassName>CNH_APIKeyGeneration</ExtClassName>
+         <ReplaceFlag>0</ReplaceFlag>
+         <QuoteTableAliases>0</QuoteTableAliases>
+         <Tables>
+            <Table Name="CNH_InternalAPIAuth" Alias="cnh" Type="PRIMARY" />
+         </Tables>
+         <Methods>
+            <Method Name="CNH_KeyGen" Transactional="NO">
+               <MethodType>2</MethodType>
+               <Parameters />
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="Brown" Key="0" Binding="BOUND" Sequence="11">
+               <BoundToColumn>brown</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>0</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Hash" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>hash</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>VeryLongListType</ColumnDataType>
+                  <DataLength>-1</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>0</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InWorkflow" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InWorkflow</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRORecordFlag>1</IsRORecordFlag>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="KeyMap" Key="0" Binding="SUBCOLLECTION" Sequence="0">
+               <Subcollection>CNH_APIAuthMaps</Subcollection>
+               <SubcollectionFilter>RowPointer=KeyPointer</SubcollectionFilter>
+               <SubstitutionProperties />
+               <PropertyAttributes />
+            </Property>
+            <Property Name="NoteExistsFlag" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NoteExistsFlag</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RoleDesc" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>role_desc</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>cnh</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
